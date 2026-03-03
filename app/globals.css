@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f9fafb;
+  --brand-teal: #0f766e;
+  --brand-light-teal: #14b8a6;
+}
+
+body {
+  background-color: var(--bg);
+  color: #0f172a;
+  font-family: system-ui, ui-sans-serif, sans-serif;
+}
+
+a {
+  color: var(--brand-teal);
+  transition: color 150ms ease;
+}
+
+a:hover {
+  color: var(--brand-light-teal);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding-inline: 1rem;
+  width: 100%;
+}
+
+@keyframes testimonial-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0.4deg);
+  }
+}
+
