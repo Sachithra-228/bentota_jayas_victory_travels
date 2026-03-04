@@ -1,0 +1,177 @@
+export const seedTours = [
+  {
+    title: "Classic Sri Lanka Highlights (8 days)",
+    slug: "classic-sri-lanka-highlights-8-days",
+    destination: "Colombo \u2013 Sigiriya \u2013 Kandy \u2013 Nuwara Eliya \u2013 Bentota",
+    category: "culture",
+    durationDays: 8,
+    priceFrom: 249600,
+    currency: "LKR",
+    highlights: [
+      "Climb Sigiriya Lion Rock at sunrise",
+      "Temple of the Tooth in Kandy",
+      "Tea country train ride",
+      "Relax on Bentota beach",
+    ],
+    inclusions: [
+      "Private AC vehicle with English-speaking driver",
+      "Hotel accommodation with breakfast",
+      "All mentioned sightseeing transfers",
+    ],
+    exclusions: [
+      "International flights",
+      "Lunches & dinners unless specified",
+      "Entry tickets to sites",
+    ],
+    images: [
+      "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg",
+      "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival in Colombo & transfer to Sigiriya",
+        description:
+          "Airport pickup, drive to Sigiriya via rural villages and check-in at hotel.",
+      },
+      {
+        day: 2,
+        title: "Sigiriya Rock & village experience",
+        description:
+          "Climb Sigiriya fortress and enjoy a traditional Sri Lankan village lunch.",
+      },
+    ],
+    isPublished: true,
+  },
+  {
+    title: "Bentota Beach & Galle Escape (5 days)",
+    slug: "bentota-beach-and-galle-escape-5-days",
+    destination: "Bentota \u2013 Galle \u2013 Colombo",
+    category: "beach",
+    durationDays: 5,
+    priceFrom: 166400,
+    currency: "LKR",
+    highlights: [
+      "Relax on Bentota beach",
+      "Boat safari on the Bentota river",
+      "Explore Galle Fort at sunset",
+    ],
+    inclusions: [
+      "Private return airport transfers",
+      "Beach hotel with breakfast",
+      "Galle and river safari excursions",
+    ],
+    exclusions: ["Personal expenses", "Optional activities"],
+    images: [
+      "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
+      "https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg",
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival & transfer to Bentota",
+        description: "Meet at the airport and drive along the coast to Bentota.",
+      },
+    ],
+    isPublished: true,
+  },
+  {
+    title: "Sri Lanka Wildlife & Yala Safari (7 days)",
+    slug: "sri-lanka-wildlife-and-yala-safari-7-days",
+    destination: "Colombo \u2013 Udawalawe \u2013 Yala \u2013 Mirissa",
+    category: "wildlife",
+    durationDays: 7,
+    priceFrom: 284800,
+    currency: "LKR",
+    highlights: [
+      "Jeep safaris in Yala National Park",
+      "Elephants in Udawalawe",
+      "Whale watching from Mirissa (seasonal)",
+    ],
+    inclusions: [
+      "Private transport with driver",
+      "Safari jeeps with park naturalist",
+      "Accommodation with breakfast",
+    ],
+    exclusions: ["National park entrance fees", "Tips"],
+    images: [
+      "https://images.pexels.com/photos/667205/pexels-photo-667205.jpeg",
+      "https://images.pexels.com/photos/46251/elephant-sri-lanka-asia-large-46251.jpeg",
+    ],
+    itinerary: [],
+    isPublished: true,
+  },
+  {
+    title: "Romantic Sri Lanka Honeymoon (9 days)",
+    slug: "romantic-sri-lanka-honeymoon-9-days",
+    destination: "Negombo \u2013 Kandy \u2013 Ella \u2013 Bentota",
+    category: "honeymoon",
+    durationDays: 9,
+    priceFrom: 368000,
+    currency: "LKR",
+    highlights: [
+      "Tea country stay in Ella",
+      "Candle-lit beach dinner in Bentota",
+      "Private car with driver throughout",
+    ],
+    inclusions: [
+      "Romantic room setups in selected hotels",
+      "Train tickets in reserved class",
+    ],
+    exclusions: ["Alcoholic beverages", "Spa treatments"],
+    images: [
+      "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg",
+      "https://images.pexels.com/photos/1021070/pexels-photo-1021070.jpeg",
+    ],
+    itinerary: [],
+    isPublished: true,
+  },
+  {
+    title: "Family Fun in Sri Lanka (10 days)",
+    slug: "family-fun-in-sri-lanka-10-days",
+    destination: "Negombo \u2013 Sigiriya \u2013 Kandy \u2013 Bentota",
+    category: "family",
+    durationDays: 10,
+    priceFrom: 316800,
+    currency: "LKR",
+    highlights: [
+      "Family-friendly jeep safari",
+      "Cultural dance show in Kandy",
+      "Free days by the pool in Bentota",
+    ],
+    inclusions: [
+      "Family rooms or interconnecting rooms",
+      "Child seats in vehicle on request",
+    ],
+    exclusions: ["Child activities not mentioned"],
+    images: [
+      "https://images.pexels.com/photos/2581189/pexels-photo-2581189.jpeg",
+      "https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg",
+    ],
+    itinerary: [],
+    isPublished: true,
+  },
+  {
+    title: "Tea Trails & Hill Country Escape (6 days)",
+    slug: "tea-trails-and-hill-country-escape-6-days",
+    destination: "Colombo \u2013 Nuwara Eliya \u2013 Ella",
+    category: "culture",
+    durationDays: 6,
+    priceFrom: 236800,
+    currency: "LKR",
+    highlights: [
+      "Tea factory visit & tasting",
+      "Scenic train ride through the hills",
+      "Little Adam\u2019s Peak hike",
+    ],
+    inclusions: ["Breakfasts", "All transfers", "Tea estate visit"],
+    exclusions: ["Optional hikes and entrance fees"],
+    images: [
+      "https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg",
+      "https://images.pexels.com/photos/972218/pexels-photo-972218.jpeg",
+    ],
+    itinerary: [],
+    isPublished: true,
+  },
+];
+
