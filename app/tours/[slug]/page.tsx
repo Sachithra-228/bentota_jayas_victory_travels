@@ -32,9 +32,12 @@ export async function generateMetadata({
 
   return {
     title: `${tour.title} | Bentota Jaya's Victory Travels`,
-    description: `${tour.destination}. ${tour.durationDays} days from ${formatLkr(
-      tour.priceFrom
-    )}.`,
+    description:
+      "description" in tour && typeof tour.description === "string"
+        ? tour.description
+        : `${tour.destination}. ${tour.durationDays} days from ${formatLkr(
+            tour.priceFrom
+          )}.`,
   };
 }
 
@@ -69,6 +72,11 @@ export default async function TourDetailPage({ params }: TourDetailPageProps) {
                 {tour.title}
               </h1>
               <p className="mt-3 text-base text-slate-600">{tour.destination}</p>
+              {"description" in tour && tour.description && (
+                <p className="mt-3 text-base leading-relaxed text-slate-600">
+                  {tour.description}
+                </p>
+              )}
 
               <div className="mt-6 grid gap-3 md:grid-cols-3">
                 <div className="rounded-3xl bg-slate-50 p-4">

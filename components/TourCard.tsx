@@ -31,7 +31,9 @@ export default function TourCard({ tour }: { tour: SerializedTour }) {
             {tour.title}
           </h3>
           <p className="mt-1 text-xs text-slate-600 line-clamp-2">
-            {tour.destination}
+            {"description" in tour && tour.description
+              ? tour.description
+              : tour.destination}
           </p>
 
           <div className="mt-3 flex items-center justify-between">

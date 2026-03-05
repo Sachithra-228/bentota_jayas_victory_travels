@@ -9,6 +9,7 @@ export type ItineraryItem = {
 export interface TourDocument extends Document {
   title: string;
   slug: string;
+  description?: string;
   destination: string;
   category: string;
   durationDays: number;
@@ -37,6 +38,7 @@ const TourSchema = new Schema<TourDocument>(
   {
     title: { type: String, required: true },
     slug: { type: String, required: true, unique: true },
+    description: { type: String },
     destination: { type: String, required: true },
     category: { type: String, required: true },
     durationDays: { type: Number, required: true },
