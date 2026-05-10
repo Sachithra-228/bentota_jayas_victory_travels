@@ -3,79 +3,101 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import StaggeredMenu from "@/components/StaggeredMenu";
 import {
   BRAND_NAME,
   NAV_LINKS,
-  PHONE_DIGITS,
-  PHONE_DISPLAY,
-  buildWhatsAppLink,
 } from "@/lib/site";
+
+function NavIcon({ href, className = "h-6 w-6" }: { href: string; className?: string }) {
+  switch (href) {
+    case "/":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" className={className} aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5" />
+          <path d="M5.5 9.5V21h13V9.5" />
+        </svg>
+      );
+    case "/packages":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" className={className} aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v5l3 2.5" />
+        </svg>
+      );
+    case "/gallery":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" className={className} aria-hidden="true">
+          <rect x="3.5" y="5" width="17" height="14" rx="2.5" />
+          <circle cx="9" cy="10" r="1.5" />
+          <path d="M5.5 17l5-4 3.5 2.5 2.5-2 2 1.5" />
+        </svg>
+      );
+    case "/contact":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.1" className={className} aria-hidden="true">
+          <path d="M4 7.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+          <path d="M4.5 8l7.5 5 7.5-5" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const mobileMenuItems = NAV_LINKS.map((link) => ({
+    label: link.label,
+    ariaLabel: `Go to ${link.label}`,
+    link: link.href,
+  }));
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 120);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="container py-4">
-        <div className="rounded-[2rem] border border-white/80 bg-white/90 px-4 py-3 shadow-soft backdrop-blur-xl">
-          <div className="flex items-center justify-between md:hidden">
-            <Link href="/" className="flex items-center gap-3">
+      <StaggeredMenu
+        className="md:hidden"
+        isFixed
+        position="right"
+        items={mobileMenuItems}
+        socialItems={[]}
+        displaySocials={false}
+        displayItemNumbering={false}
+        colors={["#9D7DFF", "#4A2BB8"]}
+        logoUrl="/images/benthotalogo.svg"
+        menuButtonColor="#111827"
+        openMenuButtonColor="#111827"
+        changeMenuColorOnOpen
+        accentColor="#facc15"
+      />
+
+      <div className="hidden md:mx-auto md:block md:w-fit md:py-3">
+        <div className={`rounded-[2rem] border border-white/80 bg-white/90 px-3 py-2.5 shadow-soft backdrop-blur-xl transition-all duration-300 md:px-4 ${scrolled ? "md:pointer-events-none md:-translate-y-4 md:opacity-0" : "md:pointer-events-auto md:translate-y-0 md:opacity-100"}`}>
+          <div className="hidden md:flex md:items-center md:justify-center md:gap-4">
+            <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.png"
+                src="/images/benthotalogo.svg"
                 alt={BRAND_NAME}
-                width={56}
-                height={56}
-                className="h-12 w-12 rounded-2xl object-cover"
+                width={170}
+                height={52}
+                className="h-9 w-auto object-contain"
                 priority
               />
-              <div>
-                <div className="text-sm font-semibold tracking-wide text-slate-900">
-                  {BRAND_NAME}
-                </div>
-                <div className="text-[11px] text-slate-500">
-                  Curated Sri Lanka journeys
-                </div>
-              </div>
             </Link>
 
-            <button
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-slate-700"
-              onClick={() => setOpen((value) => !value)}
-              aria-label="Toggle navigation"
-            >
-              <span className="sr-only">Menu</span>
-              <div className="flex flex-col gap-1">
-                <span className="block h-0.5 w-5 bg-slate-800" />
-                <span className="block h-0.5 w-5 bg-slate-800" />
-                <span className="block h-0.5 w-5 bg-slate-800" />
-              </div>
-            </button>
-          </div>
-
-          <div className="hidden md:grid md:grid-cols-[auto,1fr,auto] md:items-center md:gap-4">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/images/logo.png"
-                alt={BRAND_NAME}
-                width={64}
-                height={64}
-                className="h-14 w-14 rounded-[1.4rem] object-cover"
-                priority
-              />
-              <div>
-                <div className="text-sm font-semibold tracking-wide text-slate-900">
-                  {BRAND_NAME}
-                </div>
-                <div className="text-[11px] uppercase tracking-[0.24em] text-slate-500">
-                  Sri Lanka local experts
-                </div>
-              </div>
-            </Link>
-
-            <nav className="justify-self-center">
-              <div className="flex items-center gap-1 rounded-full bg-slate-900 p-1.5 shadow-lg">
+            <nav>
+              <div className="flex items-center gap-1">
                 {NAV_LINKS.map((link) => {
                   const active =
                     link.href === "/"
@@ -86,10 +108,10 @@ export default function Navbar() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                      className={`relative px-2.5 py-2 text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-2.5 after:right-2.5 after:h-0.5 after:rounded-full after:bg-yellow-400 ${
                         active
-                          ? "bg-white text-slate-900"
-                          : "text-white/75 hover:text-white"
+                          ? "text-slate-900 after:scale-x-100"
+                          : "text-slate-700 hover:text-yellow-500 after:scale-x-0"
                       }`}
                     >
                       {link.label}
@@ -98,78 +120,35 @@ export default function Navbar() {
                 })}
               </div>
             </nav>
-
-            <div className="flex items-center gap-3">
-              <a
-                href={`tel:${PHONE_DIGITS}`}
-                className="text-right text-xs text-slate-500"
-              >
-                <span className="block text-[10px] uppercase tracking-[0.2em]">
-                  Call us
-                </span>
-                <span className="font-semibold text-slate-900">
-                  {PHONE_DISPLAY}
-                </span>
-              </a>
-              <a
-                href={buildWhatsAppLink(
-                  "Hello, I would like to plan a Sri Lanka trip."
-                )}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center rounded-full bg-brand-teal px-5 py-3 text-xs font-semibold text-white shadow-soft hover:bg-brand-lightTeal"
-              >
-                Plan on WhatsApp
-              </a>
-            </div>
           </div>
         </div>
-
-        {open && (
-          <nav className="mt-3 rounded-3xl border border-slate-200 bg-white p-4 shadow-soft md:hidden">
-            <div className="flex flex-col gap-2">
-              {NAV_LINKS.map((link) => {
-                const active =
-                  link.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(link.href);
-
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`rounded-2xl px-4 py-3 text-sm ${
-                      active
-                        ? "bg-brand-teal text-white"
-                        : "bg-slate-50 text-slate-700"
-                    }`}
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-
-              <a
-                href={`tel:${PHONE_DIGITS}`}
-                className="rounded-2xl bg-slate-50 px-4 py-3 text-sm text-slate-700"
-              >
-                Call us: <span className="font-semibold">{PHONE_DISPLAY}</span>
-              </a>
-              <a
-                href={buildWhatsAppLink(
-                  "Hello, I would like to plan a Sri Lanka trip."
-                )}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-2xl bg-brand-teal px-4 py-3 text-sm font-semibold text-white"
-              >
-                WhatsApp us
-              </a>
-            </div>
-          </nav>
-        )}
       </div>
+
+      <nav className={`pointer-events-none fixed right-4 top-1/2 hidden -translate-y-1/2 transition-all duration-300 md:block ${scrolled ? "opacity-100" : "translate-x-6 opacity-0"}`} aria-label="Quick navigation">
+        <div className="group/rail pointer-events-auto flex flex-col items-center gap-2 rounded-[1.75rem] border border-white/50 bg-white/20 p-2 shadow-soft backdrop-blur-2xl">
+          {NAV_LINKS.map((link) => {
+            const active =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
+
+            return (
+              <Link
+                key={`float-${link.href}`}
+                href={link.href}
+                title={link.label}
+                aria-label={link.label}
+                className={`group/item inline-flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border px-2.5 transition-all duration-300 group-hover/rail:w-36 group-hover/rail:justify-start ${active ? "border-yellow-400/80 bg-yellow-200/20 text-yellow-500" : "border-transparent bg-white/10 text-slate-700 hover:border-yellow-300/70 hover:bg-yellow-100/40 hover:text-yellow-500"}`}
+              >
+                <NavIcon href={link.href} />
+                <span className="ml-2 max-w-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-300 group-hover/rail:max-w-[90px] group-hover/rail:opacity-100">
+                  {link.label}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
     </header>
   );
 }

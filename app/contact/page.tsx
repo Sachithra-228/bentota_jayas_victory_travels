@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  BRAND_NAME,
   CONTACT_EMAIL,
   PHONE_DIGITS,
   PHONE_DISPLAY,
@@ -9,6 +10,7 @@ import {
 type ContactPageProps = {
   searchParams?: {
     tour?: string;
+    package?: string;
   };
 };
 
@@ -19,30 +21,52 @@ export const metadata = {
 };
 
 export default function ContactPage({ searchParams }: ContactPageProps) {
-  const selectedTour = searchParams?.tour
-    ? decodeURIComponent(searchParams.tour)
+  const selectedPackage = searchParams?.package
+    ? decodeURIComponent(searchParams.package)
+    : searchParams?.tour
+      ? decodeURIComponent(searchParams.tour)
     : null;
 
   return (
-    <div className="bg-slate-50">
-      <section className="border-b border-slate-200 bg-white">
-        <div className="container py-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-teal">
-            Contact us
-          </p>
-          <h1 className="mt-3 text-3xl font-semibold text-slate-900 md:text-4xl">
-            Tell us your travel dates and we will shape the route
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-            Share your arrival date, number of travelers, preferred destinations,
-            hotel level, and travel style. We can suggest a practical Sri Lanka
-            itinerary with pricing guidance.
-          </p>
-          {selectedTour && (
-            <div className="mt-5 inline-flex rounded-full bg-brand-beige px-4 py-2 text-sm font-semibold text-slate-900">
-              Requesting quote for: {selectedTour}
+    <div className="-mt-32 bg-slate-50 md:-mt-36">
+      <section className="relative overflow-hidden border-b border-cyan-300/20 bg-[#120F17] pt-32 md:pt-36">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.15),_transparent_45%),radial-gradient(circle_at_bottom_right,_rgba(16,185,129,0.12),_transparent_50%)]" />
+        <div className="container relative grid gap-8 pb-12 pt-10 md:grid-cols-[1fr,1fr] md:items-start">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
+              About {BRAND_NAME}
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold text-cyan-50 md:text-4xl">
+              Bentota-based team with island-wide travel planning support
+            </h1>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-cyan-100/85">
+              We coordinate practical routes, private transport flow, and quick
+              support so your Sri Lanka trip moves smoothly from arrival to
+              departure.
+            </p>
+            <div className="mt-5 inline-flex rounded-full bg-cyan-300/20 px-4 py-2 text-sm font-semibold text-cyan-100">
+              Direct support on {PHONE_DISPLAY}
             </div>
-          )}
+          </div>
+
+          <div className="rounded-[2rem] border border-cyan-200/20 bg-slate-950/40 p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
+              Contact us
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold text-cyan-50 md:text-3xl">
+              Tell us your travel dates and we will shape the route
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-cyan-100/85">
+              Share your arrival date, number of travelers, preferred
+              destinations, hotel level, and travel style. We can suggest a
+              practical Sri Lanka itinerary with pricing guidance.
+            </p>
+            {selectedPackage && (
+              <div className="mt-5 inline-flex rounded-full bg-cyan-300/20 px-4 py-2 text-sm font-semibold text-cyan-100">
+                Requesting quote for: {selectedPackage}
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
@@ -70,8 +94,8 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
 
               <a
                 href={buildWhatsAppLink(
-                  selectedTour
-                    ? `Hello, I would like a quote for ${selectedTour}.`
+                  selectedPackage
+                    ? `Hello, I would like a quote for ${selectedPackage}.`
                     : "Hello, I would like help planning a Sri Lanka trip."
                 )}
                 target="_blank"
@@ -129,16 +153,16 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
             </ul>
 
             <div className="mt-6 rounded-3xl bg-brand-teal/20 p-5 text-sm leading-6 text-slate-200">
-              If you are not sure which route to choose, start with the tours
-              page and we can customize any of them.
+              If you are not sure which route to choose, open the Packages page
+              and we can help you choose and customize one.
             </div>
 
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center">
               <Link
-                href="/tours"
+                href="/packages"
                 className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900"
               >
-                Browse sample tours
+                Browse Packages
               </Link>
             </div>
           </div>

@@ -1,9 +1,8 @@
 import FAQSection from "@/components/FAQSection";
 import Link from "next/link";
-import Testimonials from "@/components/Testimonials";
-import TourCard from "@/components/TourCard";
-import { getFeaturedTours } from "@/lib/tours";
-import { GALLERY_IMAGES, PHONE_DISPLAY, PHONE_DIGITS } from "@/lib/site";
+import WhyTravelReveal from "@/components/WhyTravelReveal";
+import StoriesSection from "@/components/StoriesSection";
+import CircularGalleriesSection from "@/components/CircularGalleriesSection";
 
 export const metadata = {
   title: "Explore Sri Lanka with confidence | Bentota Jaya's Victory Travels",
@@ -12,254 +11,103 @@ export const metadata = {
 };
 
 export default async function HomePage() {
-  const tours = await getFeaturedTours();
-  const heroImages = GALLERY_IMAGES.slice(0, 3);
-  const experienceCards = GALLERY_IMAGES.slice(3);
+  const heroImages = [
+    {
+      url: "/images/hero_5.jpg",
+      location: "Southern Coast",
+      title: "Tropical palm coast escapes",
+      caption: "Sunlit coastlines, swaying palms, and serene beach moments.",
+    },
+    {
+      url: "/images/hero_1.jpg",
+      location: "Bentota",
+      title: "Bentota beach mornings",
+      caption: "Golden coastline and calm tropical mornings by the sea.",
+    },
+    {
+      url: "/images/hero_2.jpg",
+      location: "Hill Country",
+      title: "Hill country rail views",
+      caption: "Scenic climbs through misty mountains and tea estates.",
+    },
+  ];
 
   return (
-    <div className="bg-slate-50">
-      <section className="relative overflow-hidden pb-12">
-        <div className="absolute inset-x-0 top-0 h-[32rem] bg-gradient-to-br from-brand-beige via-white to-teal-50" />
-        <div className="absolute left-[-8rem] top-20 h-56 w-56 rounded-full bg-brand-teal/10 blur-3xl" />
-        <div className="absolute right-[-6rem] top-8 h-64 w-64 rounded-full bg-brand-lightTeal/15 blur-3xl" />
+    <div className="-mt-32 bg-slate-50 md:-mt-36">
+      <section className="relative overflow-hidden pb-24 pt-20 md:pb-28 md:pt-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2e1f70] via-[#3f2c97] to-[#1d1b6e]" />
+        <div className="absolute left-[-8rem] top-8 h-64 w-64 rounded-full bg-purple-300/20 blur-3xl" />
+        <div className="absolute right-[-10rem] top-14 h-72 w-72 rounded-full bg-indigo-300/20 blur-3xl" />
 
-        <div className="container relative grid gap-10 py-8 md:grid-cols-[1.08fr,0.92fr] md:py-12">
-          <div className="pt-4">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-brand-teal">
-              Sri Lanka travel, planned locally
-            </p>
-            <h1 className="max-w-2xl text-4xl font-semibold leading-tight text-slate-900 md:text-5xl lg:text-6xl">
-              Beautiful Sri Lanka journeys, planned with local care.
-            </h1>
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-600">
-              Beach days, hill-country views, and smooth private travel, all
-              arranged by a trusted local team.
-            </p>
+        <div className="container relative z-10 flex flex-col items-center text-center">
+          <h1 className="max-w-4xl font-serif text-4xl font-semibold leading-[1.05] text-white md:text-6xl">
+            Curated Island Adventures Crafted By Local Experts
+          </h1>
+          <p className="mt-5 text-sm leading-7 text-violet-100 md:whitespace-nowrap md:text-base">
+            Explore beaches, mountains, culture, and wildlife with private
+            routes designed around your travel pace.
+          </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <Link
-                href="/tours"
-                className="inline-flex items-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-slate-800"
-              >
-                View Sri Lanka tours
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center rounded-full border border-brand-teal/20 bg-white px-6 py-3 text-sm font-semibold text-brand-teal hover:border-brand-teal/40"
-              >
-                Request custom itinerary
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2 md:grid-rows-[1.2fr,0.8fr]">
-            <div
-              className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-slate-200 shadow-soft md:col-span-2"
-              style={{ backgroundImage: `url('${heroImages[0].url}')` }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/5 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <div className="text-xs uppercase tracking-[0.24em] text-white/75">
-                  {heroImages[0].location}
-                </div>
-                <div className="mt-2 text-2xl font-semibold">
-                  {heroImages[0].title}
-                </div>
-                <p className="mt-2 max-w-md text-sm text-white/85">
-                  {heroImages[0].caption}
-                </p>
-              </div>
-            </div>
-
-            {heroImages.slice(1).map((image) => (
-              <div
-                key={image.title}
-                className="relative min-h-[15rem] overflow-hidden rounded-[2rem] border border-white/70 bg-slate-200 shadow-soft"
-                style={{ backgroundImage: `url('${image.url}')` }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                  <div className="text-[11px] uppercase tracking-[0.24em] text-white/75">
-                    {image.location}
-                  </div>
-                  <div className="mt-2 text-lg font-semibold">{image.title}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-14">
-        <div className="container">
-          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-teal">
-                Featured routes
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-slate-900 md:text-3xl">
-                Popular Sri Lanka tour packages
-              </h2>
-            </div>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
-              href="/tours"
-              className="text-sm font-semibold text-brand-teal hover:text-brand-lightTeal"
+              href="/packages"
+              className="inline-flex items-center rounded-full bg-violet-400 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-950/35 hover:bg-violet-300"
             >
-              Browse all tours
+              Explore Packages
             </Link>
           </div>
 
-          {tours.length === 0 ? (
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 text-sm text-slate-500">
-              Tours will appear here once they are available.
+          <div className="relative mt-10 w-full max-w-5xl px-2 md:px-10">
+            <div
+              className="relative h-[16rem] overflow-hidden rounded-[1.8rem] border-[6px] border-violet-400 bg-slate-200 bg-cover bg-center bg-no-repeat shadow-[0_24px_40px_rgba(31,18,73,0.42)] md:h-[25rem]"
+              style={{ backgroundImage: `url('${heroImages[0].url}')` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5 text-left text-white md:p-7">
+                <div className="text-[11px] uppercase tracking-[0.24em] text-violet-100/85">
+                  {heroImages[0].location}
+                </div>
+                <div className="mt-2 text-xl font-semibold md:text-3xl">
+                  {heroImages[0].title}
+                </div>
+              </div>
             </div>
-          ) : (
-            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {tours.map((tour) => (
-                <TourCard key={tour._id?.toString() ?? tour.slug} tour={tour} />
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
 
-      <section className="border-y border-slate-200 bg-white py-14">
-        <div className="container">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-teal">
-                Built around the island
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-slate-900 md:text-3xl">
-                Travel styles we plan every week
-              </h2>
-            </div>
-            <p className="max-w-xl text-sm leading-6 text-slate-600">
-              We balance transit times, hotel quality, sightseeing pace, and
-              your budget so the route feels smooth instead of overpacked.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-3">
-            {experienceCards.map((card) => (
+            {heroImages.slice(1).map((image, index) => (
               <article
-                key={card.title}
-                className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50"
+                key={image.title}
+                className={`absolute top-1/2 hidden h-40 w-44 -translate-y-1/2 overflow-hidden rounded-3xl border border-white/35 bg-slate-100/10 shadow-xl backdrop-blur-md lg:block ${
+                  index === 0 ? "-left-4 -rotate-6" : "-right-4 rotate-6"
+                }`}
               >
                 <div
-                  className="h-56 w-full bg-slate-200 bg-cover bg-center"
-                  style={{ backgroundImage: `url('${card.url}')` }}
+                  className="h-full w-full bg-cover bg-center"
+                  style={{ backgroundImage: `url('${image.url}')` }}
                 />
-                <div className="p-5">
-                  <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-teal">
-                    {card.location}
-                  </div>
-                  <h3 className="mt-2 text-lg font-semibold text-slate-900">
-                    {card.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    {card.caption}
-                  </p>
-                </div>
               </article>
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="bg-brand-beige/40 py-14">
-        <div className="container">
-          <div className="grid gap-8 md:grid-cols-[1fr,0.9fr]">
-            <div className="rounded-[2rem] bg-white p-7 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-teal">
-                Why travel with us
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-                Local planning with practical support
-              </h2>
-              <div className="mt-6 grid gap-4 md:grid-cols-2">
-                <div className="rounded-3xl bg-slate-50 p-5">
-                  <div className="text-sm font-semibold text-slate-900">
-                    Local driver network
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    We schedule trusted private drivers who know the actual road
-                    conditions, not just map times.
-                  </p>
-                </div>
-                <div className="rounded-3xl bg-slate-50 p-5">
-                  <div className="text-sm font-semibold text-slate-900">
-                    Real pace planning
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    We avoid rushed itineraries and adjust routes around your
-                    arrival time, children, and travel style.
-                  </p>
-                </div>
-                <div className="rounded-3xl bg-slate-50 p-5">
-                  <div className="text-sm font-semibold text-slate-900">
-                    Clear pricing
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    You get transparent inclusions, exclusions, and sensible hotel
-                    options before confirming.
-                  </p>
-                </div>
-                <div className="rounded-3xl bg-slate-50 p-5">
-                  <div className="text-sm font-semibold text-slate-900">
-                    Fast support
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    Need a same-day change during the trip? We stay reachable on{" "}
-                    {PHONE_DISPLAY}.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Testimonials />
-          </div>
-
-          <FAQSection />
+        <div className="pointer-events-none absolute inset-x-0 bottom-[-1px] h-20 md:h-28">
+          <svg
+            className="h-full w-full"
+            viewBox="0 0 1200 140"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M0,60 C220,140 980,140 1200,60 L1200,140 L0,140 Z"
+              fill="#f8fafc"
+            />
+          </svg>
         </div>
       </section>
 
-      <section className="py-14">
-        <div className="container">
-          <div className="rounded-[2rem] bg-slate-900 px-6 py-8 text-white md:px-10 md:py-10">
-            <div className="grid gap-6 md:grid-cols-[1fr,auto] md:items-center">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-lightTeal">
-                  Start planning
-                </p>
-                <h2 className="mt-2 text-2xl font-semibold md:text-3xl">
-                  Tell us your dates, interests, and budget. We will shape the
-                  route around you.
-                </h2>
-                <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
-                  Honeymoon, family holiday, beach stay, wildlife loop, or a
-                  full island circuit. We can draft a private Sri Lanka plan
-                  with hotel ideas and transport flow.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900"
-                >
-                  Build my itinerary
-                </Link>
-                <a
-                  href={`tel:${PHONE_DIGITS}`}
-                  className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white"
-                >
-                  Call {PHONE_DISPLAY}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <WhyTravelReveal />
+      <StoriesSection />
+      <CircularGalleriesSection />
+      <FAQSection />
     </div>
   );
 }

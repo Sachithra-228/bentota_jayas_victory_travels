@@ -5,9 +5,8 @@ export const CONTACT_EMAIL = "info@bentotajayastravels.com";
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/tours", label: "Tours" },
+  { href: "/packages", label: "Packages" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
