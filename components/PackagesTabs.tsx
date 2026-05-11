@@ -81,7 +81,7 @@ const PACKAGE_TABS: PackageTab[] = [
     rows: [
       { pax: "1 Pax", vehicle: "Car", price: "Rs. 64,000" },
       { pax: "2 Pax", vehicle: "Car", price: "Rs. 76,000" },
-      { pax: "3 Pax", vehicle: "Car", price: "Rs. 80,000" },
+      { pax: "3 Pax", vehicle: "Car", price: "Rs. 86,000" },
       { pax: "4 Pax", vehicle: "Van", price: "Rs. 102,000" },
       { pax: "5 Pax", vehicle: "Van", price: "Rs. 109,000" },
       { pax: "6 Pax", vehicle: "Van", price: "Rs. 128,000" },

@@ -5,25 +5,25 @@ import DotField from "@/components/DotField";
 
 const STORIES = [
   {
-    name: "Tharushi Fernando, Colombo",
-    title: "Girls Beach Retreat",
+    name: "Sophie Carter, United Kingdom",
+    title: "Couple Adventure Route",
     quote:
-      "Bentota Jaya planned our girls trip with beach time, safe private transport, and sunset activities. Everything felt easy and perfectly timed.",
-    image: "/images/girl_1.png",
+      "From beach sunrise to hill-country views, every stop was perfectly timed. The trip felt effortless and premium from start to finish.",
+    image: "/images/foreignwoman.jpg",
   },
   {
-    name: "Nimali Perera, Matara",
-    title: "South Coast Family Tour",
+    name: "Lucas Meyer, Germany",
+    title: "Family Holiday Tour",
     quote:
-      "Our family route from Bentota to Galle was smooth and child-friendly. Hotels, driver support, and daily pacing were exactly what we needed.",
-    image: "/images/girl_2.png",
+      "Great communication, safe driving, and flexible day plans for our children. We could actually relax and enjoy each destination.",
+    image: "/images/foreignman1.jpg",
   },
   {
-    name: "Kasun Jayasinghe, Kandy",
-    title: "Private Couple Escape",
+    name: "Ethan Brooks, Australia",
+    title: "Private Island Explorer",
     quote:
-      "Bentota Jaya handled the full itinerary with clear pricing and quick WhatsApp support. We just relaxed and enjoyed Sri Lanka without stress.",
-    image: "/images/boy_1.png",
+      "Excellent private transport and clear pricing. Real-time WhatsApp updates and local tips made the whole journey smooth and stress-free.",
+    image: "/images/foreignman2.jpg",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function StoriesSection() {
             Stories from our traveler community
           </h2>
           <p className="mx-auto max-w-2xl text-sm text-violet-100/90 md:text-base">
-            Real Sri Lankan travel stories and how Bentota Jaya made each trip smooth, safe, and memorable.
+            Real international guest experiences and how Bentota Jaya made each trip smooth, safe, and memorable.
           </p>
         </div>
 
