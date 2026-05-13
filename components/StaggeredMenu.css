@@ -41,9 +41,11 @@
 
 .sm-logo-img {
   display: block;
-  height: 38px;
-  width: auto;
-  object-fit: contain;
+  height: 42px;
+  width: 42px;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 .sm-toggle {

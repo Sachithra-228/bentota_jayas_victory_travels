@@ -75,7 +75,7 @@ export default function Navbar() {
         displaySocials={false}
         displayItemNumbering={false}
         colors={["#9D7DFF", "#4A2BB8"]}
-        logoUrl="/images/benthotalogo.svg"
+        logoUrl="/images/newlogo.png"
         menuButtonColor="#111827"
         openMenuButtonColor="#111827"
         changeMenuColorOnOpen
@@ -83,15 +83,16 @@ export default function Navbar() {
       />
 
       <div className="hidden md:mx-auto md:block md:w-fit md:py-3">
-        <div className={`rounded-[2rem] border border-white/80 bg-white/90 px-3 py-2.5 shadow-soft backdrop-blur-xl transition-all duration-300 md:px-4 ${scrolled ? "md:pointer-events-none md:-translate-y-4 md:opacity-0" : "md:pointer-events-auto md:translate-y-0 md:opacity-100"}`}>
+        <div className={`rounded-[2rem] border border-slate-200 bg-white px-3 py-2.5 shadow-soft backdrop-blur-xl transition-all duration-300 md:px-4 ${scrolled ? "md:pointer-events-none md:-translate-y-4 md:opacity-0" : "md:pointer-events-auto md:translate-y-0 md:opacity-100"}`}>
           <div className="hidden md:flex md:items-center md:justify-center md:gap-4">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/benthotalogo.svg"
+                src="/images/newlogo.png"
                 alt={BRAND_NAME}
-                width={170}
-                height={52}
-                className="h-9 w-auto object-contain"
+                width={84}
+                height={84}
+                className="h-10 w-10 rounded-full object-cover"
+                style={{ objectPosition: "center 22%" }}
                 priority
               />
             </Link>

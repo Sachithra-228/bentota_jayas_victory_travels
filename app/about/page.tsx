@@ -51,7 +51,7 @@ export default function AboutPage() {
           <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6">
             <div className="flex items-center gap-4">
               <Image
-                src="/images/logo.png"
+                src="/images/newlogo.png"
                 alt={BRAND_NAME}
                 width={84}
                 height={84}

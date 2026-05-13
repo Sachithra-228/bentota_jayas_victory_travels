@@ -13,7 +13,7 @@ export const StaggeredMenu = ({
   displaySocials = true,
   displayItemNumbering = true,
   className,
-  logoUrl = "/images/benthotalogo.svg",
+  logoUrl = "/images/newlogo.png",
   menuButtonColor = "#1f2937",
   openMenuButtonColor = "#111827",
   accentColor = "#5227FF",

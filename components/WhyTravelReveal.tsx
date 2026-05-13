@@ -84,7 +84,7 @@ export default function WhyTravelReveal() {
             }`}
           >
             <Image
-              src="/images/benthotalogo.svg"
+              src="/images/newlogo.png"
               alt="Bentota Jaya logo"
               width={820}
               height={500}

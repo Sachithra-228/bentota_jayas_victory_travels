@@ -37,11 +37,10 @@ const PACKAGE_TABS: PackageTab[] = [
   {
     id: "kandy",
     label: "Kandy",
-    title: "Kandy Day Tour - From Bentota",
+    title: "Kandy Day Tour",
     image: "/images/kandytour.png",
-    includesLabel: "Places included",
-    includesText:
-      "Pinnawala Elephant Orphanage, Spice Garden, Tea Factory & Plantation, Peradeniya Botanical Garden, Temple of the Tooth, Private Transport.",
+    pickupAreas:
+      "Bentota, Ahungalla, Kosgoda, Beruwala, Kalutara, Wadduwa, Colombo, Katunayake, Negombo.",
     rows: [
       { pax: "1 Pax", vehicle: "Car", price: "Rs. 77,000" },
       { pax: "2 Pax", vehicle: "Car", price: "Rs. 92,000" },

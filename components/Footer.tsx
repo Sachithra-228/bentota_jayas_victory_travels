@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="space-y-3 md:col-span-2">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/benthotalogo.svg"
+              src="/images/newlogo.png"
               alt={BRAND_NAME}
               width={190}
               height={52}
