@@ -134,11 +134,9 @@ const PACKAGE_TABS: PackageTab[] = [
       { pax: "2 Pax", vehicle: "Car", price: "Rs. 54,500" },
       { pax: "3 Pax", vehicle: "Car", price: "Rs. 63,000" },
       { pax: "4 Pax", vehicle: "Van", price: "Rs. 76,500" },
-      { pax: "5 Pax", vehicle: "Van", price: "Rs. 147,500" },
+      { pax: "5 Pax", vehicle: "Van", price: "Rs. 80,000" },
       { pax: "6 Pax", vehicle: "Van", price: "Rs. 88,500" },
     ],
-    warning:
-      "Important check: Galle 5 Pax has 'Tea Factory & Plantation = Rs. 75,000', which looks like a typing mistake. It may need to be Rs. 7,500. Then the 5 Pax selling price should be around Rs. 80,000, not Rs. 147,500.",
   },
   {
     id: "airport",
