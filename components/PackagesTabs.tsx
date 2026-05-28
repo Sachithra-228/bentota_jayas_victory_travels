@@ -23,7 +23,7 @@ type PackageTab = {
   id: string;
   label: string;
   title: string;
-  image: string;
+  images: string[];
   pickupAreas?: string;
   includesLabel?: string;
   includesText?: string;
@@ -38,7 +38,12 @@ const PACKAGE_TABS: PackageTab[] = [
     id: "kandy",
     label: "Kandy",
     title: "Kandy Day Tour",
-    image: "/images/kandytour.png",
+    images: [
+      "/images/kandy/Kandy.jpg",
+      "/images/kandy/Best-Travel-Guide-Kandy-Sri-Lanka-32.jpg",
+      "/images/kandy/c2013ecda875e6e310d3a00950c3c62b.jpg",
+      "/images/kandy/97b519f8d032524bb22d25b0caac4d80.jpg",
+    ],
     pickupAreas:
       "Bentota, Ahungalla, Kosgoda, Beruwala, Kalutara, Wadduwa, Colombo, Katunayake, Negombo.",
     rows: [
@@ -53,7 +58,12 @@ const PACKAGE_TABS: PackageTab[] = [
     id: "yala",
     label: "Yala",
     title: "Yala National Park Day Tour",
-    image: "/images/yalatour.png",
+    images: [
+      "/images/yala/yala.jpg",
+      "/images/yala/Yala_National_Park_Sri_Lanka_2012-przerobione-1536x1024.jpg",
+      "/images/yala/5673ba75e3a130b16dcb9153758d2994.jpg",
+      "/images/yala/091d99424af7627ad847e348945a2ec7.jpg",
+    ],
     pickupAreas:
       "Wadduwa, Kalutara, Bentota, Beruwala, Kosgoda, Ahungalla, Hikkaduwa, Galle, Mirissa.",
     includesLabel: "Includes",
@@ -71,7 +81,12 @@ const PACKAGE_TABS: PackageTab[] = [
     id: "ella",
     label: "Ella",
     title: "Ella Day Tour",
-    image: "/images/ellatour.png",
+    images: [
+      "/images/ella/ella-slider-1.jpg",
+      "/images/ella/Things-to-do-in-Ella.webp",
+      "/images/ella/Backpacking-Ella-6.webp",
+      "/images/ella/Ella-Sri-Lanka-8-van-11-scaled.jpg",
+    ],
     pickupAreas:
       "Wadduwa, Kalutara, Bentota, Beruwala, Kosgoda, Ahungalla, Hikkaduwa, Galle, Mirissa.",
     includesLabel: "Places included",
@@ -90,7 +105,12 @@ const PACKAGE_TABS: PackageTab[] = [
     id: "sigiriya",
     label: "Sigiriya",
     title: "Sigiriya & Dambulla Day Tour",
-    image: "/images/sigiriyatour.png",
+    images: [
+      "/images/sigiriya/Sigiriya-Main.jpg",
+      "/images/sigiriya/sigiriya1.jpg",
+      "/images/sigiriya/Sigiriya_(141688197).jpeg",
+      "/images/sigiriya/Sigiriya-Uncovered-Delving-into-the-History-Art-and-Legends-800x609-1.jpg",
+    ],
     pickupAreas: "Wadduwa, Kalutara, Beruwala, Bentota, Ahungalla.",
     includesLabel: "Places included",
     includesText:
@@ -107,7 +127,12 @@ const PACKAGE_TABS: PackageTab[] = [
     id: "udawalawe",
     label: "Udawalawe",
     title: "Udawalawe National Park Day Tour",
-    image: "/images/udawalawatour.png",
+    images: [
+      "/images/udawalawe/777ac20c39b4ec358d3b5e568bcde9b2.jpg",
+      "/images/udawalawe/6134a458c9a4ebf4f793c9c82418aaed.jpg",
+      "/images/udawalawe/541a1b65dd3e3f4838a6ecda24ec8666.jpg",
+      "/images/udawalawe/9cc102b9e719af9e8fd95960880a62a7.jpg",
+    ],
     pickupAreas: "Wadduwa, Kalutara, Beruwala, Bentota, Ahungalla.",
     includesLabel: "Includes",
     includesText:
@@ -124,7 +149,12 @@ const PACKAGE_TABS: PackageTab[] = [
     id: "galle",
     label: "Galle",
     title: "Galle Day Tour",
-    image: "/images/galledaytour.png",
+    images: [
+      "/images/galle/7c928a2ea83c0b7b0be15c895dbfddc5.jpg",
+      "/images/galle/426a7c600b8958994d16a273773a43b1.jpg",
+      "/images/galle/23f8abdbb4f2450ab9d0ec44ed1170de.jpg",
+      "/images/galle/237a7b52854312546872cf2306d50241.jpg",
+    ],
     pickupAreas: "Wadduwa, Kalutara, Beruwala, Bentota, Ahungalla.",
     includesLabel: "Places included",
     includesText:
@@ -142,7 +172,11 @@ const PACKAGE_TABS: PackageTab[] = [
     id: "airport",
     label: "Airport",
     title: "Airport Arrival & Departure Transfers",
-    image: "/images/airportnew.png",
+    images: [
+      "/images/airport/08f03d05a7fc34db514afc88afb6c438.jpg",
+      "/images/airport/4b719fa6055755fdbfba08dea58878bc.jpg",
+      "/images/airport/d1e2e1674d76426edb152d2bec095382.jpg",
+    ],
     transferSections: [
       {
         route:
@@ -189,8 +223,20 @@ const PACKAGE_TABS: PackageTab[] = [
 
 export default function PackagesTabs() {
   const [activeTab, setActiveTab] = useState(PACKAGE_TABS[0].id);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
   const currentTab =
     PACKAGE_TABS.find((item) => item.id === activeTab) ?? PACKAGE_TABS[0];
+  const images = currentTab.images.length
+    ? currentTab.images
+    : ["/images/beach.jpg"];
+
+  const showPreviousImage = () => {
+    setActiveImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const showNextImage = () => {
+    setActiveImageIndex((prev) => (prev + 1) % images.length);
+  };
 
   return (
     <section className="pb-16 pt-6 md:pt-8">
@@ -203,7 +249,10 @@ export default function PackagesTabs() {
                 <button
                   key={item.id}
                   type="button"
-                  onClick={() => setActiveTab(item.id)}
+                  onClick={() => {
+                    setActiveTab(item.id);
+                    setActiveImageIndex(0);
+                  }}
                   className={`whitespace-nowrap rounded-xl px-4 py-2 text-sm font-semibold transition-colors ${
                     isActive
                       ? "bg-cyan-300/20 text-cyan-100 shadow-sm ring-1 ring-cyan-200/40"
@@ -221,12 +270,48 @@ export default function PackagesTabs() {
           <div className="grid lg:grid-cols-[0.9fr,1.1fr]">
             <div className="relative min-h-[22rem] bg-slate-900 md:min-h-[28rem] lg:min-h-[44rem]">
               <Image
-                src={currentTab.image}
+                src={images[activeImageIndex]}
                 alt={currentTab.title}
                 width={900}
                 height={700}
                 className="h-full w-full object-cover"
               />
+
+              {images.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={showPreviousImage}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 px-3 py-2 text-lg font-bold text-white transition hover:bg-black/60"
+                    aria-label="Previous image"
+                  >
+                    {"<"}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={showNextImage}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 px-3 py-2 text-lg font-bold text-white transition hover:bg-black/60"
+                    aria-label="Next image"
+                  >
+                    {">"}
+                  </button>
+                  <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-black/35 px-3 py-2">
+                    {images.map((_, index) => (
+                      <button
+                        key={`${currentTab.id}-dot-${index}`}
+                        type="button"
+                        onClick={() => setActiveImageIndex(index)}
+                        className={`h-2.5 w-2.5 rounded-full transition ${
+                          index === activeImageIndex
+                            ? "bg-white"
+                            : "bg-white/45 hover:bg-white/75"
+                        }`}
+                        aria-label={`Go to image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="p-5 md:p-6">

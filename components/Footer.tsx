@@ -69,7 +69,6 @@ export default function Footer() {
             <Link href="/packages">Packages</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/gallery">Gallery</Link>
-            <Link href="/admin/login">Admin</Link>
           </div>
         </div>
       </div>
