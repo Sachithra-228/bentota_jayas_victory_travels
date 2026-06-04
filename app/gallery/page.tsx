@@ -1,9 +1,10 @@
 import DomeGallery from "@/components/DomeGallery";
+import WildlifeGallery from "@/components/WildlifeGallery";
 
 export const metadata = {
   title: "Gallery | Bentota Jaya's Victory Travels",
   description:
-    "Interactive dome gallery view of Bentota Jaya's Victory Travels.",
+    "Interactive dome gallery and wildlife photography from Bentota Jaya's Victory Travels.",
 };
 
 export default function GalleryPage() {
@@ -19,8 +20,9 @@ export default function GalleryPage() {
   ];
 
   return (
-    <div className="-mt-32 h-screen bg-[#120F17] md:-mt-36">
-      <div className="h-full pt-32 md:pt-36">
+    <div className="-mt-32 bg-[#120F17] md:-mt-36">
+      {/* Dome gallery — full viewport height */}
+      <div className="h-screen pt-32 md:pt-36">
         <DomeGallery
           images={images}
           fit={0.5}
@@ -40,6 +42,9 @@ export default function GalleryPage() {
           grayscale={false}
         />
       </div>
+
+      {/* Wildlife scroll gallery */}
+      <WildlifeGallery />
     </div>
   );
 }

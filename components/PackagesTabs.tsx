@@ -47,10 +47,10 @@ const PACKAGE_TABS: PackageTab[] = [
     pickupAreas:
       "Bentota, Ahungalla, Kosgoda, Beruwala, Kalutara, Wadduwa, Colombo, Katunayake, Negombo.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "Rs. 77,000" },
-      { pax: "2 Pax", vehicle: "Car", price: "Rs. 92,000" },
-      { pax: "3 Pax", vehicle: "Car", price: "Rs. 118,000" },
-      { pax: "4 Pax", vehicle: "Van", price: "Rs. 152,000" },
+      { pax: "1 Pax", vehicle: "Car", price: "$270" },
+      { pax: "2 Pax", vehicle: "Car", price: "$333" },
+      { pax: "3 Pax", vehicle: "Car", price: "$410" },
+      { pax: "4 Pax", vehicle: "Van", price: "$525" },
     ],
     note: "Children and baby prices may vary.",
   },
@@ -69,12 +69,12 @@ const PACKAGE_TABS: PackageTab[] = [
     includesLabel: "Includes",
     includesText: "Yala entry ticket, safari jeep, private transport.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "Rs. 82,000" },
-      { pax: "2 Pax", vehicle: "Car", price: "Rs. 96,000" },
-      { pax: "3 Pax", vehicle: "Car", price: "Rs. 115,000" },
-      { pax: "4 Pax", vehicle: "Van", price: "Rs. 135,000" },
-      { pax: "5 Pax", vehicle: "Van", price: "Rs. 153,000" },
-      { pax: "6 Pax", vehicle: "Van", price: "Rs. 168,000" },
+      { pax: "1 Pax", vehicle: "Car", price: "$290" },
+      { pax: "2 Pax", vehicle: "Car", price: "$340" },
+      { pax: "3 Pax", vehicle: "Car", price: "$400" },
+      { pax: "4 Pax", vehicle: "Van", price: "$485" },
+      { pax: "5 Pax", vehicle: "Van", price: "$545" },
+      { pax: "6 Pax", vehicle: "Van", price: "$595" },
     ],
   },
   {
@@ -93,12 +93,12 @@ const PACKAGE_TABS: PackageTab[] = [
     includesText:
       "Waterfall visit, Little Adam's Peak hiking, Nine Arch Bridge, train ticket, tuk tuk transfer, private transport.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "Rs. 64,000" },
-      { pax: "2 Pax", vehicle: "Car", price: "Rs. 76,000" },
-      { pax: "3 Pax", vehicle: "Car", price: "Rs. 86,000" },
-      { pax: "4 Pax", vehicle: "Van", price: "Rs. 102,000" },
-      { pax: "5 Pax", vehicle: "Van", price: "Rs. 109,000" },
-      { pax: "6 Pax", vehicle: "Van", price: "Rs. 128,000" },
+      { pax: "1 Pax", vehicle: "Car", price: "$230" },
+      { pax: "2 Pax", vehicle: "Car", price: "$270" },
+      { pax: "3 Pax", vehicle: "Car", price: "$310" },
+      { pax: "4 Pax", vehicle: "Van", price: "$360" },
+      { pax: "5 Pax", vehicle: "Van", price: "$400" },
+      { pax: "6 Pax", vehicle: "Van", price: "$430" },
     ],
   },
   {
@@ -116,11 +116,11 @@ const PACKAGE_TABS: PackageTab[] = [
     includesText:
       "Sigiriya Rock Fortress, Dambulla Cave Temple, guide service, private transport.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "Rs. 79,000" },
-      { pax: "2 Pax", vehicle: "Car", price: "Rs. 99,000" },
-      { pax: "3 Pax", vehicle: "Car", price: "Rs. 119,000" },
-      { pax: "4 Pax", vehicle: "Van", price: "Rs. 150,000" },
-      { pax: "5 Pax", vehicle: "Van", price: "Rs. 177,000" },
+      { pax: "1 Pax", vehicle: "Car", price: "$296" },
+      { pax: "2 Pax", vehicle: "Car", price: "$380" },
+      { pax: "3 Pax", vehicle: "Car", price: "$450" },
+      { pax: "4 Pax", vehicle: "Van", price: "$520" },
+      { pax: "5 Pax", vehicle: "Van", price: "$605" },
     ],
   },
   {
@@ -138,11 +138,11 @@ const PACKAGE_TABS: PackageTab[] = [
     includesText:
       "Park ticket, safari jeep, elephant milk feeding, private transport.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "Rs. 79,800" },
-      { pax: "2 Pax", vehicle: "Car", price: "Rs. 91,600" },
-      { pax: "3 Pax", vehicle: "Car", price: "Rs. 107,400" },
-      { pax: "4 Pax", vehicle: "Car/Van", price: "Rs. 134,500" },
-      { pax: "5 Pax", vehicle: "Van", price: "Rs. 148,000" },
+      { pax: "1 Pax", vehicle: "Car", price: "$280" },
+      { pax: "2 Pax", vehicle: "Car", price: "$320" },
+      { pax: "3 Pax", vehicle: "Car", price: "$375" },
+      { pax: "4 Pax", vehicle: "Car/Van", price: "$460" },
+      { pax: "5 Pax", vehicle: "Van", price: "$495" },
     ],
   },
   {
@@ -160,12 +160,12 @@ const PACKAGE_TABS: PackageTab[] = [
     includesText:
       "Bentota River Tour, Spice Garden, Turtle Conservation Center, Moonstone Mines, Gems & Jewellery, Galle Dutch Fort, Stilt Fishermen, Tea Factory & Plantation.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "Rs. 46,000" },
-      { pax: "2 Pax", vehicle: "Car", price: "Rs. 54,500" },
-      { pax: "3 Pax", vehicle: "Car", price: "Rs. 63,000" },
-      { pax: "4 Pax", vehicle: "Van", price: "Rs. 76,500" },
-      { pax: "5 Pax", vehicle: "Van", price: "Rs. 80,000" },
-      { pax: "6 Pax", vehicle: "Van", price: "Rs. 88,500" },
+      { pax: "1 Pax", vehicle: "Car", price: "$170" },
+      { pax: "2 Pax", vehicle: "Car", price: "$200" },
+      { pax: "3 Pax", vehicle: "Car", price: "$225" },
+      { pax: "4 Pax", vehicle: "Van", price: "$250" },
+      { pax: "5 Pax", vehicle: "Van", price: "$265" },
+      { pax: "6 Pax", vehicle: "Van", price: "$295" },
     ],
   },
   {
@@ -182,39 +182,39 @@ const PACKAGE_TABS: PackageTab[] = [
         route:
           "Bandaranaike International Airport to Wadduwa / Kalutara / Beruwala / Bentota",
         rows: [
-          { vehicle: "Car", price: "Rs. 22,000" },
-          { vehicle: "Van", price: "Rs. 28,000" },
+          { vehicle: "Car", price: "$80" },
+          { vehicle: "Van", price: "$90" },
         ],
       },
       {
         route:
           "Bandaranaike International Airport to Ahungalla / Kosgoda / Hikkaduwa",
         rows: [
-          { vehicle: "Car", price: "Rs. 26,000" },
-          { vehicle: "Van", price: "Rs. 30,000" },
+          { vehicle: "Car", price: "$86" },
+          { vehicle: "Van", price: "$100" },
         ],
       },
       {
         route: "Mattala International Airport to Mirissa / Galle",
         rows: [
-          { vehicle: "Car", price: "Rs. 32,000" },
-          { vehicle: "Van", price: "Rs. 35,000" },
+          { vehicle: "Car", price: "$100" },
+          { vehicle: "Van", price: "$130" },
         ],
       },
       {
         route:
           "Mattala International Airport to Hikkaduwa / Ahungalla / Kosgoda",
         rows: [
-          { vehicle: "Car", price: "Rs. 35,000" },
-          { vehicle: "Van", price: "Rs. 40,000" },
+          { vehicle: "Car", price: "$115" },
+          { vehicle: "Van", price: "$125" },
         ],
       },
       {
         route:
           "Mattala International Airport to Bentota / Beruwala / Kalutara / Wadduwa",
         rows: [
-          { vehicle: "Car", price: "Rs. 40,000" },
-          { vehicle: "Van", price: "Rs. 45,000" },
+          { vehicle: "Car", price: "$125" },
+          { vehicle: "Van", price: "$135" },
         ],
       },
     ],
@@ -266,159 +266,159 @@ export default function PackagesTabs() {
           </div>
         </div>
 
-        <article className="mt-6 overflow-hidden rounded-[2rem] border border-cyan-200/20 bg-cyan-950/30 shadow-[0_20px_60px_rgba(5,24,36,0.35)]">
-          <div className="grid lg:grid-cols-[0.9fr,1.1fr]">
-            <div className="relative min-h-[22rem] bg-slate-900 md:min-h-[28rem] lg:min-h-[44rem]">
-              <Image
-                src={images[activeImageIndex]}
-                alt={currentTab.title}
-                width={900}
-                height={700}
-                className="h-full w-full object-cover"
-              />
-
-              {images.length > 1 && (
-                <>
-                  <button
-                    type="button"
-                    onClick={showPreviousImage}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 px-3 py-2 text-lg font-bold text-white transition hover:bg-black/60"
-                    aria-label="Previous image"
-                  >
-                    {"<"}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={showNextImage}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 px-3 py-2 text-lg font-bold text-white transition hover:bg-black/60"
-                    aria-label="Next image"
-                  >
-                    {">"}
-                  </button>
-                  <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-black/35 px-3 py-2">
-                    {images.map((_, index) => (
-                      <button
-                        key={`${currentTab.id}-dot-${index}`}
-                        type="button"
-                        onClick={() => setActiveImageIndex(index)}
-                        className={`h-2.5 w-2.5 rounded-full transition ${
-                          index === activeImageIndex
-                            ? "bg-white"
-                            : "bg-white/45 hover:bg-white/75"
-                        }`}
-                        aria-label={`Go to image ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-
-            <div className="p-5 md:p-6">
-              <h2 className="text-2xl font-semibold text-cyan-50 md:text-3xl">
-                {currentTab.title}
-              </h2>
-
-              {currentTab.pickupAreas && (
-                <p className="mt-4 text-sm leading-7 text-cyan-100/85">
-                  <span className="font-semibold text-cyan-100">Pickup areas: </span>
-                  {currentTab.pickupAreas}
-                </p>
-              )}
-
-              {currentTab.includesText && (
-                <p className="mt-3 text-sm leading-7 text-cyan-100/85">
-                  <span className="font-semibold text-cyan-100">
-                    {currentTab.includesLabel}:{" "}
-                  </span>
-                  {currentTab.includesText}
-                </p>
-              )}
-
-              {currentTab.rows && (
-                <div className="mt-6 overflow-hidden rounded-2xl border border-cyan-200/20">
-                  <table className="w-full border-collapse text-left text-sm">
-                    <thead className="bg-cyan-200/10">
-                      <tr>
-                        <th className="px-4 py-3 font-semibold text-cyan-100">Pax</th>
-                        <th className="px-4 py-3 font-semibold text-cyan-100">Vehicle</th>
-                        <th className="px-4 py-3 text-right font-semibold text-cyan-100">
-                          Selling Price
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {currentTab.rows.map((row) => (
-                        <tr
-                          key={`${row.pax}-${row.vehicle}-${row.price}`}
-                          className="border-t border-cyan-200/10"
-                        >
-                          <td className="px-4 py-3 text-cyan-50/90">{row.pax}</td>
-                          <td className="px-4 py-3 text-cyan-50/90">{row.vehicle}</td>
-                          <td className="px-4 py-3 text-right font-semibold text-cyan-50">
-                            {row.price}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-
-              {currentTab.transferSections && (
-                <div className="mt-6 space-y-5">
-                  {currentTab.transferSections.map((section) => (
-                    <div
-                      key={section.route}
-                      className="overflow-hidden rounded-2xl border border-cyan-200/20"
-                    >
-                      <div className="bg-cyan-200/10 px-4 py-3 text-sm font-semibold text-cyan-100">
-                        {section.route}
-                      </div>
-                      <table className="w-full border-collapse text-left text-sm">
-                        <thead className="bg-transparent">
-                          <tr>
-                            <th className="px-4 py-3 font-semibold text-cyan-100">Vehicle</th>
-                            <th className="px-4 py-3 text-right font-semibold text-cyan-100">
-                              Price
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {section.rows.map((row) => (
-                            <tr
-                              key={`${section.route}-${row.vehicle}`}
-                              className="border-t border-cyan-200/10"
-                            >
-                              <td className="px-4 py-3 text-cyan-50/90">{row.vehicle}</td>
-                              <td className="px-4 py-3 text-right font-semibold text-cyan-50">
-                                {row.price}
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
+        <div className="mt-6">
+          {/* Full-width image banner */}
+          <div className="relative h-64 w-full overflow-hidden rounded-2xl md:h-80 lg:h-96">
+            <Image
+              src={images[activeImageIndex]}
+              alt={currentTab.title}
+              fill
+              className="object-cover"
+            />
+            {images.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={showPreviousImage}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 px-3 py-2 text-lg font-bold text-white transition hover:bg-black/60"
+                  aria-label="Previous image"
+                >
+                  {"<"}
+                </button>
+                <button
+                  type="button"
+                  onClick={showNextImage}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 px-3 py-2 text-lg font-bold text-white transition hover:bg-black/60"
+                  aria-label="Next image"
+                >
+                  {">"}
+                </button>
+                <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-black/35 px-3 py-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={`${currentTab.id}-dot-${index}`}
+                      type="button"
+                      onClick={() => setActiveImageIndex(index)}
+                      className={`h-2.5 w-2.5 rounded-full transition ${
+                        index === activeImageIndex
+                          ? "bg-white"
+                          : "bg-white/45 hover:bg-white/75"
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
                   ))}
                 </div>
-              )}
-
-              {currentTab.note && (
-                <p className="mt-5 rounded-xl bg-amber-100/15 px-4 py-3 text-sm text-amber-100">
-                  <span className="font-semibold">Note: </span>
-                  {currentTab.note}
-                </p>
-              )}
-
-              {currentTab.warning && (
-                <p className="mt-5 rounded-xl bg-rose-100/15 px-4 py-3 text-sm text-rose-100">
-                  {currentTab.warning}
-                </p>
-              )}
-
-            </div>
+              </>
+            )}
           </div>
-        </article>
+
+          {/* Content below image */}
+          <div className="mt-6">
+            <h2 className="text-2xl font-semibold text-cyan-50 md:text-3xl">
+              {currentTab.title}
+            </h2>
+
+            {(currentTab.pickupAreas || currentTab.includesText) && (
+              <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:gap-8">
+                {currentTab.pickupAreas && (
+                  <p className="text-sm leading-7 text-cyan-100/85">
+                    <span className="font-semibold text-cyan-100">Pickup areas: </span>
+                    {currentTab.pickupAreas}
+                  </p>
+                )}
+                {currentTab.includesText && (
+                  <p className="text-sm leading-7 text-cyan-100/85">
+                    <span className="font-semibold text-cyan-100">
+                      {currentTab.includesLabel}:{" "}
+                    </span>
+                    {currentTab.includesText}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {currentTab.rows && (
+              <div className="mt-6 overflow-hidden rounded-2xl border border-cyan-200/20">
+                <table className="w-full border-collapse text-left text-sm">
+                  <thead className="bg-cyan-200/10">
+                    <tr>
+                      <th className="px-4 py-3 font-semibold text-cyan-100">Pax</th>
+                      <th className="px-4 py-3 font-semibold text-cyan-100">Vehicle</th>
+                      <th className="px-4 py-3 text-right font-semibold text-cyan-100">
+                        Selling Price (USD)
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {currentTab.rows.map((row) => (
+                      <tr
+                        key={`${row.pax}-${row.vehicle}-${row.price}`}
+                        className="border-t border-cyan-200/10"
+                      >
+                        <td className="px-4 py-3 text-cyan-50/90">{row.pax}</td>
+                        <td className="px-4 py-3 text-cyan-50/90">{row.vehicle}</td>
+                        <td className="px-4 py-3 text-right font-semibold text-cyan-50">
+                          {row.price}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {currentTab.transferSections && (
+              <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {currentTab.transferSections.map((section) => (
+                  <div
+                    key={section.route}
+                    className="overflow-hidden rounded-2xl border border-cyan-200/20"
+                  >
+                    <div className="bg-cyan-200/10 px-4 py-3 text-sm font-semibold text-cyan-100">
+                      {section.route}
+                    </div>
+                    <table className="w-full border-collapse text-left text-sm">
+                      <thead className="bg-transparent">
+                        <tr>
+                          <th className="px-4 py-3 font-semibold text-cyan-100">Vehicle</th>
+                          <th className="px-4 py-3 text-right font-semibold text-cyan-100">
+                            Price (USD)
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.rows.map((row) => (
+                          <tr
+                            key={`${section.route}-${row.vehicle}`}
+                            className="border-t border-cyan-200/10"
+                          >
+                            <td className="px-4 py-3 text-cyan-50/90">{row.vehicle}</td>
+                            <td className="px-4 py-3 text-right font-semibold text-cyan-50">
+                              {row.price}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {currentTab.note && (
+              <p className="mt-5 rounded-xl bg-amber-100/15 px-4 py-3 text-sm text-amber-100">
+                <span className="font-semibold">Note: </span>
+                {currentTab.note}
+              </p>
+            )}
+
+            {currentTab.warning && (
+              <p className="mt-5 rounded-xl bg-rose-100/15 px-4 py-3 text-sm text-rose-100">
+                {currentTab.warning}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );
