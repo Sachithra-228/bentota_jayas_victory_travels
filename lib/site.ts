@@ -1,7 +1,7 @@
 export const BRAND_NAME = "Bentota Jaya's Victory Travels";
 export const PHONE_DISPLAY = "+94 77 777 8271";
 export const PHONE_DIGITS = PHONE_DISPLAY.replace(/[^0-9]/g, "");
-export const CONTACT_EMAIL = "info@bentotajayastravels.com";
+export const CONTACT_EMAIL = "jayasvictorytravels@gmail.com";
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
