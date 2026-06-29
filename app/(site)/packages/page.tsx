@@ -1,4 +1,5 @@
 import PackagesTabs from "@/components/PackagesTabs";
+import { getPackages } from "@/lib/content";
 
 export const metadata = {
   title: "Packages | Bentota Jaya's Victory Travels",
@@ -6,7 +7,11 @@ export const metadata = {
     "Explore Sri Lanka travel packages from Bentota Jaya's Victory Travels.",
 };
 
-export default function PackagesPage() {
+export const dynamic = "force-dynamic";
+
+export default async function PackagesPage() {
+  const packages = await getPackages();
+
   return (
     <div className="-mt-32 min-h-screen bg-[#120F17] md:-mt-36">
       <section className="border-b border-slate-200 bg-white pt-32 md:pt-36">
@@ -22,7 +27,7 @@ export default function PackagesPage() {
         </div>
       </section>
 
-      <PackagesTabs />
+      <PackagesTabs tabs={packages} />
     </div>
   );
 }

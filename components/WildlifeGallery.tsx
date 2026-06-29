@@ -3,15 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-const BIRDS = Array.from({ length: 11 }, (_, i) => ({
-  src: `/images/gallery/p${i + 1}.jpeg`,
-  alt: `Sri Lanka bird ${i + 1}`,
-}));
-
-const ANIMALS = Array.from({ length: 6 }, (_, i) => ({
-  src: `/images/gallery/a${i + 1}.jpeg`,
-  alt: `Sri Lanka animal ${i + 1}`,
-}));
+type GalleryItem = { src: string; alt: string };
 
 function ChevronLeft() {
   return (
@@ -138,7 +130,13 @@ function Section({
   );
 }
 
-export default function WildlifeGallery() {
+export default function WildlifeGallery({
+  birds,
+  animals,
+}: {
+  birds: GalleryItem[];
+  animals: GalleryItem[];
+}) {
   return (
     <section className="bg-[#120F17] pb-24 pt-2">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
@@ -152,17 +150,21 @@ export default function WildlifeGallery() {
         </div>
       </div>
 
-      <Section
-        title="Birds of Sri Lanka"
-        subtitle="Feathered wonders captured in the wild"
-        items={BIRDS}
-      />
+      {birds.length > 0 && (
+        <Section
+          title="Birds of Sri Lanka"
+          subtitle="Feathered wonders captured in the wild"
+          items={birds}
+        />
+      )}
 
-      <Section
-        title="Wild Animals"
-        subtitle="The untamed creatures of Sri Lanka's forests and plains"
-        items={ANIMALS}
-      />
+      {animals.length > 0 && (
+        <Section
+          title="Wild Animals"
+          subtitle="The untamed creatures of Sri Lanka's forests and plains"
+          items={animals}
+        />
+      )}
     </section>
   );
 }
