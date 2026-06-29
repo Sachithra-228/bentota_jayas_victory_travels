@@ -1,5 +1,6 @@
 import DomeGallery from "@/components/DomeGallery";
 import WildlifeGallery from "@/components/WildlifeGallery";
+import { getGallery } from "@/lib/content";
 
 export const metadata = {
   title: "Gallery | Bentota Jaya's Victory Travels",
@@ -7,24 +8,29 @@ export const metadata = {
     "Interactive dome gallery and wildlife photography from Bentota Jaya's Victory Travels.",
 };
 
-export default function GalleryPage() {
-  const images = [
-    { src: "/images/d1.jpg", alt: "Bentota dome image 1" },
-    { src: "/images/d2.jpg", alt: "Bentota dome image 2" },
-    { src: "/images/d3.jpg", alt: "Bentota dome image 3" },
-    { src: "/images/d4.jpg", alt: "Bentota dome image 4" },
-    { src: "/images/d5.jpg", alt: "Bentota dome image 5" },
-    { src: "/images/d6.jpg", alt: "Bentota dome image 6" },
-    { src: "/images/d7.jpg", alt: "Bentota dome image 7" },
-    { src: "/images/d8.jpg", alt: "Bentota dome image 8" },
-  ];
+export const dynamic = "force-dynamic";
+
+export default async function GalleryPage() {
+  const gallery = await getGallery();
+  const domeImages = gallery.dome.map((item) => ({
+    src: item.src,
+    alt: item.alt,
+  }));
+  const birds = gallery["wildlife-birds"].map((item) => ({
+    src: item.src,
+    alt: item.alt,
+  }));
+  const animals = gallery["wildlife-animals"].map((item) => ({
+    src: item.src,
+    alt: item.alt,
+  }));
 
   return (
     <div className="-mt-32 bg-[#120F17] md:-mt-36">
       {/* Dome gallery — full viewport height */}
       <div className="h-screen pt-32 md:pt-36">
         <DomeGallery
-          images={images}
+          images={domeImages}
           fit={0.5}
           fitBasis="auto"
           minRadius={600}
@@ -44,7 +50,7 @@ export default function GalleryPage() {
       </div>
 
       {/* Wildlife scroll gallery */}
-      <WildlifeGallery />
+      <WildlifeGallery birds={birds} animals={animals} />
     </div>
   );
 }

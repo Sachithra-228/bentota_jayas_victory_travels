@@ -4,6 +4,15 @@ const nextConfig = {
     serverActions: {
       bodySizeLimit: '2mb',
     },
+    serverComponentsExternalPackages: ['@vercel/blob'],
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+      },
+    ],
   },
 };
 
