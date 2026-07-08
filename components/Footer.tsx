@@ -37,6 +37,13 @@ export default function Footer() {
           <p className="text-xs text-slate-500">
             &copy; {new Date().getFullYear()} {BRAND_NAME}. All rights
             reserved.
+            {" · "}
+            <Link
+              href="/admin"
+              className="text-slate-400 transition-colors hover:text-slate-600"
+            >
+              Admin
+            </Link>
           </p>
         </div>
 

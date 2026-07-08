@@ -25,7 +25,7 @@ const TOUR_FAQS: FaqItem[] = [
       "Kandy Temple",
     ],
     pricesTitle: "Price Range",
-    prices: ["Rs. 92,000", "Rs. 118,000", "Rs. 152,000"],
+    prices: ["$270", "$333", "$410", "$525"],
   },
   {
     question: "What does the Yala National Park Day Tour include?",
@@ -33,14 +33,7 @@ const TOUR_FAQS: FaqItem[] = [
     placesTitle: "Included",
     places: ["Yala Entry Ticket", "Safari Jeep", "Taxi Transportation"],
     pricesTitle: "Price Range",
-    prices: [
-      "Rs. 82,000",
-      "Rs. 96,000",
-      "Rs. 115,000",
-      "Rs. 135,000",
-      "Rs. 153,000",
-      "Rs. 168,000",
-    ],
+    prices: ["$290", "$340", "$400", "$485", "$545", "$595"],
   },
   {
     question: "What can I experience on the Ella Day Tour?",
@@ -54,7 +47,7 @@ const TOUR_FAQS: FaqItem[] = [
       "Tuk Tuk Experience",
     ],
     pricesTitle: "Price Range",
-    prices: ["Rs. 64,000", "Rs. 76,000", "Rs. 102,000", "Rs. 109,000", "Rs. 128,000"],
+    prices: ["$230", "$270", "$310", "$360", "$400", "$430"],
   },
   {
     question: "What is included in the Sigiriya & Dambulla Day Tour?",
@@ -67,13 +60,7 @@ const TOUR_FAQS: FaqItem[] = [
       "Taxi Transportation",
     ],
     pricesTitle: "Price Range",
-    prices: [
-      "Rs. 79,000",
-      "Rs. 99,000",
-      "Rs. 119,000",
-      "Rs. 150,000",
-      "Rs. 177,000",
-    ],
+    prices: ["$296", "$380", "$450", "$520", "$605"],
   },
   {
     question: "What does the Udawalawe National Park Day Tour include?",
@@ -86,13 +73,7 @@ const TOUR_FAQS: FaqItem[] = [
       "Taxi Transportation",
     ],
     pricesTitle: "Price Range",
-    prices: [
-      "Rs. 79,800",
-      "Rs. 91,600",
-      "Rs. 107,400",
-      "Rs. 134,500",
-      "Rs. 148,000",
-    ],
+    prices: ["$280", "$320", "$375", "$460", "$495"],
   },
   {
     question: "Which highlights are covered in the Galle Day Tour?",
@@ -107,14 +88,7 @@ const TOUR_FAQS: FaqItem[] = [
       "Stick Fishermen",
     ],
     pricesTitle: "Price Range",
-    prices: [
-      "Rs. 46,000",
-      "Rs. 54,500",
-      "Rs. 63,000",
-      "Rs. 76,500",
-      "Rs. 88,500",
-      "Rs. 147,500",
-    ],
+    prices: ["$170", "$200", "$225", "$250", "$265", "$295"],
   },
   {
     question: "How much are airport arrival and departure transfers?",
@@ -125,7 +99,7 @@ const TOUR_FAQS: FaqItem[] = [
       "Airport -> Ahungalla / Kosgoda / Hikkaduwa",
     ],
     pricesTitle: "Vehicle Prices",
-    prices: ["Car - Rs. 22,000", "Van - Rs. 28,000"],
+    prices: ["Car - $80", "Van - $90"],
   },
 ];
 

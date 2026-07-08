@@ -3,14 +3,14 @@
 import CircularGallery from "@/components/CircularGallery";
 
 const galleryOne = [
-  { image: "/images/gallery_1.png", text: "" },
-  { image: "/images/gallery_2.png", text: "" },
-  { image: "/images/gallery_3.png", text: "" },
-  { image: "/images/gallery_4.png", text: "" },
-  { image: "/images/gallery_5.png", text: "" },
-  { image: "/images/gallery_6.png", text: "" },
-  { image: "/images/gallery_7.png", text: "" },
-  { image: "/images/gallery_8.png", text: "" },
+  { image: "/images/d1.jpg", text: "" },
+  { image: "/images/d2.jpg", text: "" },
+  { image: "/images/d3.jpg", text: "" },
+  { image: "/images/d4.jpg", text: "" },
+  { image: "/images/d5.jpg", text: "" },
+  { image: "/images/d6.jpg", text: "" },
+  { image: "/images/d7.jpg", text: "" },
+  { image: "/images/d8.jpg", text: "" },
 ];
 
 export default function CircularGalleriesSection() {
