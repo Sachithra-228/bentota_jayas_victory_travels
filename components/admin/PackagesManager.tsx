@@ -435,7 +435,7 @@ function PackageEditor({
       <div className="mt-8">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-semibold text-slate-900">
-            Price rows (Pax / Vehicle / Price)
+            Price rows (Person / Vehicle / Price)
           </h3>
           <button
             onClick={() =>
@@ -454,7 +454,7 @@ function PackageEditor({
             <div key={i} className="flex gap-2">
               <input
                 className={`${inputClass} mt-0`}
-                placeholder="1 Pax"
+                placeholder="1 Person"
                 value={row.pax}
                 onChange={(e) => {
                   const rows = [...draft.rows];

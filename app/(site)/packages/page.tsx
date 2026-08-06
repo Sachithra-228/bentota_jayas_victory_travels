@@ -21,7 +21,7 @@ export default async function PackagesPage() {
           </h1>
           <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-700">
             Select each tab to view inclusions, pickup areas, vehicle type, and
-            pricing by pax. Use the quote button inside each tab to contact us
+            pricing by person. Use the quote button inside each tab to contact us
             directly for booking.
           </p>
         </div>

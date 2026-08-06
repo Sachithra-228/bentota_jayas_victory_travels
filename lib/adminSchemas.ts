@@ -2,7 +2,7 @@ import { z } from "zod";
 import { GALLERY_SECTIONS } from "@/models/GalleryImage";
 
 const tourRowSchema = z.object({
-  pax: z.string().min(1, "Pax is required."),
+  pax: z.string().min(1, "Person is required."),
   vehicle: z.string().min(1, "Vehicle is required."),
   price: z.string().min(1, "Price is required."),
 });

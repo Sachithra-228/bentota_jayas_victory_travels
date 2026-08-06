@@ -26,6 +26,8 @@ export default function PackagesTabs({ tabs }: { tabs: PackageTab[] }) {
   const images = currentTab.images.length
     ? currentTab.images
     : ["/images/beach.jpg"];
+  const formatPersonLabel = (value: string) =>
+    value.replace(/\bPax\b/gi, "Person");
 
   const showPreviousImage = () => {
     setActiveImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -139,7 +141,7 @@ export default function PackagesTabs({ tabs }: { tabs: PackageTab[] }) {
                 <table className="w-full border-collapse text-left text-sm">
                   <thead className="bg-cyan-200/10">
                     <tr>
-                      <th className="px-4 py-3 font-semibold text-cyan-100">Pax</th>
+                      <th className="px-4 py-3 font-semibold text-cyan-100">Person</th>
                       <th className="px-4 py-3 font-semibold text-cyan-100">Vehicle</th>
                       <th className="px-4 py-3 text-right font-semibold text-cyan-100">
                         Selling Price (USD)
@@ -152,7 +154,7 @@ export default function PackagesTabs({ tabs }: { tabs: PackageTab[] }) {
                         key={`${row.pax}-${row.vehicle}-${row.price}`}
                         className="border-t border-cyan-200/10"
                       >
-                        <td className="px-4 py-3 text-cyan-50/90">{row.pax}</td>
+                        <td className="px-4 py-3 text-cyan-50/90">{formatPersonLabel(row.pax)}</td>
                         <td className="px-4 py-3 text-cyan-50/90">{row.vehicle}</td>
                         <td className="px-4 py-3 text-right font-semibold text-cyan-50">
                           {row.price}

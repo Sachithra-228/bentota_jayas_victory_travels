@@ -50,10 +50,10 @@ export const DEFAULT_PACKAGES: PackageTab[] = [
     pickupAreas:
       "Bentota, Ahungalla, Kosgoda, Beruwala, Kalutara, Wadduwa, Colombo, Katunayake, Negombo.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "$270" },
-      { pax: "2 Pax", vehicle: "Car", price: "$333" },
-      { pax: "3 Pax", vehicle: "Car", price: "$410" },
-      { pax: "4 Pax", vehicle: "Van", price: "$525" },
+      { pax: "1 Person", vehicle: "Car", price: "$270" },
+      { pax: "2 Person", vehicle: "Car", price: "$333" },
+      { pax: "3 Person", vehicle: "Car", price: "$410" },
+      { pax: "4 Person", vehicle: "Van", price: "$525" },
     ],
     note: "Children and baby prices may vary.",
   },
@@ -72,12 +72,12 @@ export const DEFAULT_PACKAGES: PackageTab[] = [
     includesLabel: "Includes",
     includesText: "Yala entry ticket, safari jeep, private transport.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "$290" },
-      { pax: "2 Pax", vehicle: "Car", price: "$340" },
-      { pax: "3 Pax", vehicle: "Car", price: "$400" },
-      { pax: "4 Pax", vehicle: "Van", price: "$485" },
-      { pax: "5 Pax", vehicle: "Van", price: "$545" },
-      { pax: "6 Pax", vehicle: "Van", price: "$595" },
+      { pax: "1 Person", vehicle: "Car", price: "$290" },
+      { pax: "2 Person", vehicle: "Car", price: "$340" },
+      { pax: "3 Person", vehicle: "Car", price: "$400" },
+      { pax: "4 Person", vehicle: "Van", price: "$485" },
+      { pax: "5 Person", vehicle: "Van", price: "$545" },
+      { pax: "6 Person", vehicle: "Van", price: "$595" },
     ],
   },
   {
@@ -96,12 +96,12 @@ export const DEFAULT_PACKAGES: PackageTab[] = [
     includesText:
       "Waterfall visit, Little Adam's Peak hiking, Nine Arch Bridge, train ticket, tuk tuk transfer, private transport.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "$230" },
-      { pax: "2 Pax", vehicle: "Car", price: "$270" },
-      { pax: "3 Pax", vehicle: "Car", price: "$310" },
-      { pax: "4 Pax", vehicle: "Van", price: "$360" },
-      { pax: "5 Pax", vehicle: "Van", price: "$400" },
-      { pax: "6 Pax", vehicle: "Van", price: "$430" },
+      { pax: "1 Person", vehicle: "Car", price: "$230" },
+      { pax: "2 Person", vehicle: "Car", price: "$270" },
+      { pax: "3 Person", vehicle: "Car", price: "$310" },
+      { pax: "4 Person", vehicle: "Van", price: "$360" },
+      { pax: "5 Person", vehicle: "Van", price: "$400" },
+      { pax: "6 Person", vehicle: "Van", price: "$430" },
     ],
   },
   {
@@ -119,11 +119,11 @@ export const DEFAULT_PACKAGES: PackageTab[] = [
     includesText:
       "Sigiriya Rock Fortress, Dambulla Cave Temple, guide service, private transport.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "$296" },
-      { pax: "2 Pax", vehicle: "Car", price: "$380" },
-      { pax: "3 Pax", vehicle: "Car", price: "$450" },
-      { pax: "4 Pax", vehicle: "Van", price: "$520" },
-      { pax: "5 Pax", vehicle: "Van", price: "$605" },
+      { pax: "1 Person", vehicle: "Car", price: "$296" },
+      { pax: "2 Person", vehicle: "Car", price: "$380" },
+      { pax: "3 Person", vehicle: "Car", price: "$450" },
+      { pax: "4 Person", vehicle: "Van", price: "$520" },
+      { pax: "5 Person", vehicle: "Van", price: "$605" },
     ],
   },
   {
@@ -141,11 +141,11 @@ export const DEFAULT_PACKAGES: PackageTab[] = [
     includesText:
       "Park ticket, safari jeep, elephant milk feeding, private transport.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "$280" },
-      { pax: "2 Pax", vehicle: "Car", price: "$320" },
-      { pax: "3 Pax", vehicle: "Car", price: "$375" },
-      { pax: "4 Pax", vehicle: "Car/Van", price: "$460" },
-      { pax: "5 Pax", vehicle: "Van", price: "$495" },
+      { pax: "1 Person", vehicle: "Car", price: "$280" },
+      { pax: "2 Person", vehicle: "Car", price: "$320" },
+      { pax: "3 Person", vehicle: "Car", price: "$375" },
+      { pax: "4 Person", vehicle: "Car/Van", price: "$460" },
+      { pax: "5 Person", vehicle: "Van", price: "$495" },
     ],
   },
   {
@@ -163,12 +163,12 @@ export const DEFAULT_PACKAGES: PackageTab[] = [
     includesText:
       "Bentota River Tour, Spice Garden, Turtle Conservation Center, Moonstone Mines, Gems & Jewellery, Galle Dutch Fort, Stilt Fishermen, Tea Factory & Plantation.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "$170" },
-      { pax: "2 Pax", vehicle: "Car", price: "$200" },
-      { pax: "3 Pax", vehicle: "Car", price: "$225" },
-      { pax: "4 Pax", vehicle: "Van", price: "$250" },
-      { pax: "5 Pax", vehicle: "Van", price: "$265" },
-      { pax: "6 Pax", vehicle: "Van", price: "$295" },
+      { pax: "1 Person", vehicle: "Car", price: "$170" },
+      { pax: "2 Person", vehicle: "Car", price: "$200" },
+      { pax: "3 Person", vehicle: "Car", price: "$225" },
+      { pax: "4 Person", vehicle: "Van", price: "$250" },
+      { pax: "5 Person", vehicle: "Van", price: "$265" },
+      { pax: "6 Person", vehicle: "Van", price: "$295" },
     ],
   },
   {
@@ -186,12 +186,12 @@ export const DEFAULT_PACKAGES: PackageTab[] = [
     includesLabel: "Includes",
     includesText: "Taxi, ticket, breakfast, vessel, crew service.",
     rows: [
-      { pax: "1 Pax", vehicle: "Car", price: "$150" },
-      { pax: "2 Pax", vehicle: "Car", price: "$190" },
-      { pax: "3 Pax", vehicle: "Car", price: "$250" },
-      { pax: "4 Pax", vehicle: "Van", price: "$300" },
-      { pax: "5 Pax", vehicle: "Van", price: "$365" },
-      { pax: "6 Pax", vehicle: "Van", price: "$420" },
+      { pax: "1 Person", vehicle: "Car", price: "$150" },
+      { pax: "2 Person", vehicle: "Car", price: "$190" },
+      { pax: "3 Person", vehicle: "Car", price: "$250" },
+      { pax: "4 Person", vehicle: "Van", price: "$300" },
+      { pax: "5 Person", vehicle: "Van", price: "$365" },
+      { pax: "6 Person", vehicle: "Van", price: "$420" },
     ],
   },
   {
