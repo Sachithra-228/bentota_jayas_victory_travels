@@ -49,6 +49,9 @@ export const DEFAULT_PACKAGES: PackageTab[] = [
     ],
     pickupAreas:
       "Bentota, Ahungalla, Kosgoda, Beruwala, Kalutara, Wadduwa, Colombo, Katunayake, Negombo.",
+    includesLabel: "Includes",
+    includesText:
+      "Pinnawala Elephant Orphanage entry ticket, Botanical Garden ticket, Kandy Temple ticket, and guide.",
     rows: [
       { pax: "1 Person", vehicle: "Car", price: "$270" },
       { pax: "2 Person", vehicle: "Car", price: "$333" },
