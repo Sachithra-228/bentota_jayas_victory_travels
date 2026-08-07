@@ -24,21 +24,25 @@ export async function getPackages(): Promise<PackageTab[]> {
     if (!docs.length) {
       return DEFAULT_PACKAGES;
     }
-    return docs.map((doc) => ({
-      slug: doc.slug,
-      label: doc.label,
-      title: doc.title,
-      images: doc.images ?? [],
-      pickupAreas: doc.pickupAreas || undefined,
-      includesLabel: doc.includesLabel || undefined,
-      includesText: doc.includesText || undefined,
-      rows: doc.rows?.length ? doc.rows : undefined,
-      transferSections: doc.transferSections?.length
-        ? doc.transferSections
-        : undefined,
-      note: doc.note || undefined,
-      warning: doc.warning || undefined,
-    }));
+    return docs.map((doc) => {
+      const fallback = DEFAULT_PACKAGES.find((pkg) => pkg.slug === doc.slug);
+
+      return {
+        slug: doc.slug,
+        label: doc.label,
+        title: doc.title,
+        images: doc.images?.length ? doc.images : fallback?.images ?? [],
+        pickupAreas: doc.pickupAreas || fallback?.pickupAreas,
+        includesLabel: doc.includesLabel || fallback?.includesLabel,
+        includesText: doc.includesText || fallback?.includesText,
+        rows: doc.rows?.length ? doc.rows : fallback?.rows,
+        transferSections: doc.transferSections?.length
+          ? doc.transferSections
+          : fallback?.transferSections,
+        note: doc.note || fallback?.note,
+        warning: doc.warning || fallback?.warning,
+      };
+    });
   } catch {
     return DEFAULT_PACKAGES;
   }
